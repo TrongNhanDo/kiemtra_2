@@ -16,5 +16,17 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            if(textboxusername.Text.Equals("admin")&&textboxmatkhau.Text.Equals("admin")) {
+                Home home = new Home();
+                this.Hide();
+                home.Show();
+            }
+            else {
+                MessageBox.Show("Vui lòng kiểm tra lại thông tin đăng nhập!", "Thông báo");
+            }
+        }
     }
 }
